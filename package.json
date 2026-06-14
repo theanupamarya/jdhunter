@@ -6,11 +6,13 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "fetch": "node src/index.js fetch",
-    "analyze": "node src/index.js analyze"
+    "fetch": "node -e \"import('./src/runner.js').then(m => m.runFetch())\""
   },
   "dependencies": {
     "axios": "^1.7.2",
-    "dotenv": "^16.4.5"
+    "better-sqlite3": "^12.10.1",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1"
   }
 }
